@@ -1,0 +1,10 @@
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json ./
+RUN npm install
+#we are refrancing to local machine 
+COPY . .
+
+CMD ["npm", "start"]
